@@ -90,6 +90,13 @@ body{
     justify-content: center;
     gap: 5rem;
 }
+.segFoto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 4rem;
+}
 
 @keyframes subir {
     0% {
