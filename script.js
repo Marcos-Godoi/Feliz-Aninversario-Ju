@@ -32,26 +32,3 @@ document.addEventListener('DOMContentLoaded', () => {
     botao.style.pointerEvents = 'none';
   });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const backgroundMusic = document.getElementById('background-music');
-    const toggleMusicButton = document.getElementById('toggle-music');
-
-    // Tenta tocar a música automaticamente
-    // Muitos navegadores bloqueiam a reprodução automática de mídia com som.
-    // É uma boa prática iniciar a reprodução com uma interação do usuário.
-    backgroundMusic.play().catch(error => {
-        console.log('Reprodução automática bloqueada:', error);
-        // Opcional: mostrar uma mensagem para o usuário ou habilitar o botão
-    });
-
-    // Adiciona um evento de clique ao botão para ligar/desligar a música
-    toggleMusicButton.addEventListener('click', function() {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            toggleMusicButton.textContent = 'Desligar Música';
-        } else {
-            backgroundMusic.pause();
-            toggleMusicButton.textContent = 'Ligar Música';
-        }
-    });
-});
